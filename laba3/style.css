@@ -1,0 +1,111 @@
+/* --- Загальні стилі для сторінок Andrysoft --- */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f9fc; /* Світло-сірий фон */
+    color: #333333;
+    margin: 20px 40px;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    color: #2c3e50; /* Темно-синій колір заголовків */
+}
+
+/* Оформлення меню навігації */
+.main-navigation {
+    background-color: #e2e8f0;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    border: 1px solid #cbd5e1;
+}
+
+.link-nav {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.link-nav:hover {
+    text-decoration: underline;
+    color: #004494;
+}
+
+.menu-item {
+    margin-bottom: 10px;
+}
+
+/* Стилі для списків компанії */
+.square-list {
+    list-style-type: square;
+}
+
+.main-ordered-list {
+    font-weight: bold;
+}
+
+.sub-ordered-list {
+    font-weight: normal;
+    color: #475569;
+}
+
+.list-item {
+    margin-bottom: 8px;
+}
+
+.term-title {
+    color: #047857; /* Темно-зелений для термінів */
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Рухомий рядок */
+.mq-class {
+    color: #0f172a;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #fef08a; /* Жовтий фон для привернення уваги */
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+
+/* --- Окремі стилі для сторінки Eyespoly (червоно-сині тони) --- */
+body.eyespoly-theme {
+    background-color: #ffffff; 
+    border-top: 8px solid #d32f2f; /* Товста червона лінія зверху */
+    border-left: 8px solid #1976d2; /* Синя лінія зліва */
+}
+
+.eyespoly-theme .main-navigation {
+    background-color: #f8f9fa;
+    border-color: #1976d2; /* Синя рамка меню */
+}
+
+.eyespoly-title {
+    color: #d32f2f; /* Червоний заголовок */
+    border-bottom: 2px solid #1976d2; /* Синя лінія під заголовком */
+    padding-bottom: 10px;
+}
+
+.eyespoly-subtitle {
+    color: #1976d2; /* Синій підзаголовок */
+}
+
+.eyespoly-info-box {
+    background-color: #e3f2fd; /* Дуже світло-синій фон блоку */
+    border-left: 5px solid #d32f2f; /* Червона лінія зліва блоку */
+    padding: 15px;
+    margin-top: 25px;
+    font-style: italic;
+}
+
+.eyespoly-text a {
+    color: #d32f2f;
+    font-weight: bold;
+}
+
+.eyespoly-text a:hover {
+    color: #1976d2;
+}

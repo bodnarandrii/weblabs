@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Andrysoft - Наші проекти</title>
+    <link id="lists-style" rel="stylesheet" sizes="any" type="text/css" href="style.css">
+</head>
+<body>
+    <nav class="main-navigation">
+        <a rev="prev" dir="ltr" class="link-nav" target="_self" href="menu.html" title="Повернутися">Повернутися до меню</a>
+    </nav>
+
+    <!-- Рухомий рядок -->
+    <marquee height="40" scrollamount="5" direction="left" title="Привітання" class="mq-class" id="mq-welcome">
+        Ласкаво просимо до Andrysoft — ми створюємо зручні рішення для повсякденних задач!
+    </marquee>
+
+    <h2>Наші продукти (Маркований список):</h2>
+    <!-- Неупорядкований список за вимогами -->
+    <ul start="1" value="square" compact="compact" class="square-list">
+        <li value="1" class="list-item"><b>Eyespoly</b> — наш основний кросплатформний додаток. Доступний у Flatpak, RPM, Arch Linux та Windows.</li>
+        <li value="2" class="list-item"><b>Sharaga-Dairy</b> — зручний електронний щоденник та розклад занять для студентів. (У розробці на базі Next.js та PostgreSQL).</li>
+    </ul>
+
+    <h2>Етапи розробки додатків (Нумерований список):</h2>
+    <!-- Впорядкований список -->
+    <ol class="main-ordered-list" type="a" start="1">
+        <li value="1" class="list-item">Планування архітектури
+            <ol class="sub-ordered-list" type="1" start="1">
+                <li value="1" class="list-item">Налаштування серверної частини</li>
+                <li value="2" class="list-item">Розробка інтерфейсу</li>
+            </ol>
+        </li>
+        <li value="2" class="list-item">Написання коду та тестування</li>
+        <li value="3" class="list-item">Реліз та підтримка користувачів</li>
+    </ol>
+
+    <h2>Словник термінів компанії (Список визначень):</h2>
+    <dl>
+        <dt title="Компанія Andrysoft" class="term-title" id="term-andrysoft">Andrysoft</dt>
+        <dd dir="ltr" title="Опис компанії">Інді-студія розробки корисних додатків та веб-сервісів.</dd>
+        
+        <dt title="Sharaga-Dairy" class="term-title" id="term-dairy">Sharaga-Dairy</dt>
+        <dd dir="ltr" title="Опис щоденника">Веб-додаток для керування розкладом університету, що спрощує життя студентам.</dd>
+    </dl>
+
+    <p>
+        <nobr id="nobr-text" class="text-nobreak">Мета Andrysoft — створювати надійний софт як для Linux середовищ, так і для користувачів Windows.</nobr>
+    </p>
+
+    <menu>
+        <command id="cmd-action" checked="checked" class="btn-command">Приєднатися до тестування</command>
+    </menu>
+</body>
+</html>
