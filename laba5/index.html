@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="uk" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" lang="uk" content="Боднар Андрій Олександрович">
+    <meta name="Description" content="Лабораторна робота №5. Сторінка форм. Варіант 1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №5 — Варіант 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="form-wrapper">
+    <h1>Оформлення замовлення обладнання</h1>
+    <p class="intro-text">
+        Будь ласка, заповніть усі необхідні поля форми для придбання техніки.
+    </p>
+
+    <form action="#" method="post" name="orderForm" dir="ltr" accept-charset="UTF-8" accept="image/*">
+        
+        <fieldset>
+            <legend title="Контактні дані покупця" class="section-legend" dir="ltr">
+                Контактна інформація
+            </legend>
+
+            <label class="field-label" form="orderForm" style="display: block; margin-top: 10px;">
+                Номер телефону:
+            </label>
+            <input type="tel" name="phone" id="phone" value="+380" maxlength="19" minlength="10" dir="ltr" autofocus required>
+
+            <label class="field-label" form="orderForm" style="display: block; margin-top: 10px;">
+                Бажана дата доставки:
+            </label>
+            <input type="date" name="delivery_date" min="2026-01-01" max="2026-12-31" value="2026-10-20">
+
+            <label class="field-label" form="orderForm" style="display: block; margin-top: 10px;">
+                Місяць поставки партії:
+            </label>
+            <input type="month" name="delivery_month">
+
+            <label class="field-label" form="orderForm" style="display: block; margin-top: 10px;">
+                Кількість одиниць товару:
+            </label>
+            <input type="number" name="quantity" min="1" max="100" value="1">
+
+            <label class="field-label" form="orderForm" style="display: block; margin-top: 10px;">
+                Тип пакування:
+            </label>
+            <input type="radio" name="packaging" id="pack_std" value="standard" checked>
+            <label for="pack_std">Стандартне</label>
+            <input type="radio" name="packaging" id="pack_prm" value="premium">
+            <label for="pack_prm">Посилене захисне</label>
+            <br>
+
+            <label class="field-label" form="orderForm" style="display: block; margin-top: 10px;">
+                Точний час узгодження (datetime):
+            </label>
+            <input type="datetime" name="contact_datetime">
+
+            <label class="field-label" form="orderForm" style="display: block; margin-top: 10px;">
+                Пошук за каталожним номером:
+            </label>
+            <input type="search" name="sku_search" placeholder="Введіть артикул товару...">
+
+            <label class="field-label" form="orderForm" style="display: block; margin-top: 10px;">
+                Заблоковане поле конфігурації:
+            </label>
+            <input type="text" name="system_lock" value="Редагуванню не підлягає" disabled>
+
+            <label class="field-label" form="orderForm" style="display: block; margin-top: 10px;">
+                Швидке підтвердження замовлення (графічна кнопка):
+            </label>
+            <input type="image" src="https://via.placeholder.com/120x35.png?text=Купити" alt="Оформити" formtarget="_self" formmethod="post" max="100">
+        </fieldset>
+
+        <fieldset>
+            <legend title="Параметри та примітки" class="section-legend" dir="ltr">
+                Деталі замовлення
+            </legend>
+
+            <label class="field-label" form="orderForm" style="display: block; margin-top: 10px;">
+                Категорія продукції:
+            </label>
+            <select name="product_cat">
+                <optgroup label="Мережеве обладнання" dir="ltr">
+                    <option value="router">Маршрутизатор керований</option>
+                    <option value="switch">Комутатор гігабітний</option>
+                </optgroup>
+                <optgroup label="Серверні шафи (немає в наявності)" dir="ltr" disabled>
+                    <option value="rack_19">Стійка 19U</option>
+                </optgroup>
+            </select>
+
+            <label class="field-label" form="orderForm" style="display: block; margin-top: 10px;">
+                Додаткові побажання до комплектації:
+            </label>
+            <textarea name="comment" class="custom-textarea" maxlength="300" dir="ltr" readonly style="width: 100%; height: 90px;">Тільки самовивіз зі складу за адресою виробництва.</textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend title="Статус та показники" class="section-legend" dir="ltr">
+                Службова інформація
+            </legend>
+
+            <details>
+                <summary dir="ltr" lang="uk" title="Натисніть для перегляду деталей розрахунку">
+                    Умови гарантійного обслуговування
+                </summary>
+                <p>Гарантія на компоненти становить 24 місяці з дати відвантаження зі складу.</p>
+            </details>
+            <br>
+
+            <label class="field-label" form="orderForm" style="display: block;">
+                Залишок комплектуючих на складі (meter):
+            </label>
+            <meter id="stockLevel" min="0" low="25" high="85" max="100" value="70" dir="ltr" style="width: 250px;">70%</meter>
+            <br><br>
+
+            <label class="field-label" form="orderForm" style="display: block;">
+                Готовність формувальника (progress):
+            </label>
+            <progress class="order-progress" style="width: 250px;" value="80" max="100">80%</progress>
+            <br><br>
+
+            <label class="field-label" form="orderForm" style="display: inline;">
+                Попередній розрахунок вартості:
+            </label>
+            <output id="totalCost" lang="uk" title="Підсумкова сума" for="stockLevel">4 850 грн</output>
+        </fieldset>
+
+        <button type="submit" name="btnSubmitOrder" formaction="#" formtarget="_self" autofocus>
+            Відправити інформацію
+        </button>
+    </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,146 @@
+
+body {
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    font-style: normal;
+    font-variant: small-caps;
+    background-color: #f7f9fb;
+    color: #222;
+    padding: 25px;
+    margin: 0;
+}
+
+h1 {
+    font-family: Impact, sans-serif;
+    font-weight: 300;
+    font-stretch: semi-condensed;
+    text-shadow: #777777 2px 2px 3px;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+    color: #1a365d;
+}
+
+h2 {
+    font-family: 'Lucida Sans', sans-serif;
+    font-stretch: extra-condensed;
+    text-decoration: underline;
+}
+
+.intro-text {
+    font-family: Helvetica, sans-serif;
+    font-size-adjust: 0.52;
+    font-stretch: ultra-condensed;
+    text-indent: 4%;
+    line-height: 1.5;
+}
+
+.code-example {
+    font-family: Courier, monospace;
+}
+
+.system-icon-label {
+    font: icon;
+}
+
+.form-wrapper {
+    max-width: 720px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid #d2d6dc;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    padding: 18px;
+    margin-bottom: 20px;
+    background-color: #fafbfc;
+}
+
+legend.section-legend {
+    font-weight: bold;
+    padding: 0 8px;
+    color: #2b6cb0;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="date"],
+input[type="month"],
+input[type="number"],
+input[type="search"],
+input[type="datetime"],
+select,
+textarea {
+    box-sizing: border-box;
+    padding: 7px 10px;
+    border: 1px solid #a0aec0;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #3182ce;
+    outline: none;
+    background-color: #edf2f7;
+}
+
+button[type="submit"] {
+    background-color: #2b6cb0;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #2c5282;
+}
+
+@media print {
+    @page {
+        size: portrait;
+        marks: cross;
+        page: auto;
+    }
+
+    .form-wrapper {
+        page-break-inside: avoid;
+        widows: 2;
+        orphans: 2;
+        border: none;
+        box-shadow: none;
+    }
+}
+
+@media speech, aural {
+    body {
+        volume: x-soft;
+        cue-before: url("chime-start.wav");
+        cue-after: url("chime-end.wav");
+        cue: url("notification.wav");
+        azimuth: center-right;
+        elevation: lower;
+        speech-rate: medium;
+        voice-family: male;
+        stress: 50;
+        richness: 60;
+        speak-numeral: continuous;
+        speak-punctuation: none;
+    }
+
+    .silent-block {
+        volume: silent;
+        azimuth: right-side;
+        speech-rate: faster;
+        play-during: url("background.wav") mix repeat;
+    }
+}
