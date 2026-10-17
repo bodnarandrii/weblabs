@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №4</title>
+    <!-- Підключення зовнішнього файлу стилів -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Магазин комп'ютерних комплектуючих «CyberCore Hardware»</h1>
+
+    <table id="components-table" title="Прайс-лист комплектуючих ПК" lang="uk" dir="ltr" align="center" border="1">
+        
+        <caption id="table-title" title="Каталог та наявність товарів">
+            Наявність комплектуючих та технічні параметри
+        </caption>
+
+        <colgroup>
+            <col align="center" char="." width="5%">
+            <col align="left" char=" " width="15%">
+            <col align="left" char=" " width="10%">
+            <col align="left" char=" " width="10%">
+            <col align="center" char="-" width="10%">
+            <col align="center" char=" " width="10%">
+            <col align="center" char=" " width="10%">
+            <col align="center" char=" " width="10%">
+            <col align="right" char="." width="10%">
+            <col align="center" char=" " width="10%">
+        </colgroup>
+
+        <thead>
+            <!-- Тег tr з обов'язковими атрибутами: align, charoff, valign, id -->
+            <tr id="row-main-header" align="center" valign="middle" charoff="0">
+                <!-- Теги th з обов'язковими атрибутами: abbr, colspan, id, class -->
+                <th abbr="Код" colspan="1" id="th-code" class="header-cell">№</th>
+                <th abbr="Опис" colspan="4" id="th-details" class="header-cell">Основні параметри та специфікація</th>
+                <th abbr="Сумісність" colspan="3" id="th-spec" class="header-cell">Сумісність та споживання</th>
+                <th abbr="Ціна" colspan="1" id="th-price" class="header-cell">Ціна (₴)</th>
+                <th abbr="Склад" colspan="1" id="th-stock" class="header-cell">Склад</th>
+            </tr>
+        </thead>
+
+        <tbody id="tbody-processors" title="Процесори та материнські плати" align="center" char=".">
+            <tr id="row-item-1" align="left" valign="middle" charoff="0">
+                <td abbr="01" colspan="1" id="td-id-1" class="data-cell numeric-cell">01</td>
+                <td abbr="CPU" colspan="1" id="td-type-1" class="data-cell">Процесор</td>
+                <td abbr="AMD" colspan="1" id="td-brand-1" class="data-cell">AMD Ryzen 7 7800X3D</td>
+                <td abbr="8C" colspan="1" id="td-cores-1" class="data-cell">8 ядер / 16 потоків</td>
+                <td abbr="5.0G" colspan="1" id="td-freq-1" class="data-cell">4.2 - 5.0 GHz</td>
+                <td abbr="AM5" colspan="1" id="td-sock-1" class="data-cell">Socket AM5</td>
+                <td abbr="120W" colspan="1" id="td-tdp-1" class="data-cell">120 W TDP</td>
+                <td abbr="DDR5" colspan="1" id="td-mem-1" class="data-cell">DDR5-5200</td>
+                <td abbr="17200" colspan="1" id="td-pr-1" class="data-cell numeric-cell">17 200</td>
+                <td abbr="Є" colspan="1" id="td-st-1" class="data-cell">В наявності</td>
+            </tr>
+            <tr id="row-item-2" align="left" valign="middle" charoff="0">
+                <td abbr="02" colspan="1" id="td-id-2" class="data-cell numeric-cell">02</td>
+                <td abbr="CPU" colspan="1" id="td-type-2" class="data-cell">Процесор</td>
+                <td abbr="Intel" colspan="1" id="td-brand-2" class="data-cell">Intel Core i5-14600K</td>
+                <td abbr="14C" colspan="1" id="td-cores-2" class="data-cell">14 ядер / 20 потоків</td>
+                <td abbr="5.3G" colspan="1" id="td-freq-2" class="data-cell">3.5 - 5.3 GHz</td>
+                <td abbr="LGA1700" colspan="1" id="td-sock-2" class="data-cell">LGA1700</td>
+                <td abbr="181W" colspan="1" id="td-tdp-2" class="data-cell">181 W TDP</td>
+                <td abbr="D4/D5" colspan="1" id="td-mem-2" class="data-cell">DDR4 / DDR5</td>
+                <td abbr="12900" colspan="1" id="td-pr-2" class="data-cell numeric-cell">12 900</td>
+                <td abbr="Є" colspan="1" id="td-st-2" class="data-cell">В наявності</td>
+            </tr>
+            <tr id="row-item-3" align="left" valign="middle" charoff="0">
+                <td abbr="03" colspan="1" id="td-id-3" class="data-cell numeric-cell">03</td>
+                <td abbr="MB" colspan="1" id="td-type-3" class="data-cell">Материнська плата</td>
+                <td abbr="ASUS" colspan="1" id="td-brand-3" class="data-cell">ASUS ROG B650E-F</td>
+                <td abbr="ATX" colspan="1" id="td-form-3" class="data-cell">ATX / Wi-Fi 6E</td>
+                <td abbr="PCIe5" colspan="1" id="td-pcie-3" class="data-cell">PCIe 5.0 x16</td>
+                <td abbr="AM5" colspan="1" id="td-sock-3" class="data-cell">Socket AM5</td>
+                <td abbr="65W" colspan="1" id="td-tdp-3" class="data-cell">VRM 12+2</td>
+                <td abbr="4xDDR5" colspan="1" id="td-mem-3" class="data-cell">4x DDR5-6400+</td>
+                <td abbr="11450" colspan="1" id="td-pr-3" class="data-cell numeric-cell">11 450</td>
+                <td abbr="Є" colspan="1" id="td-st-3" class="data-cell">В наявності</td>
+            </tr>
+            <tr id="row-item-4" align="left" valign="middle" charoff="0">
+                <td abbr="04" colspan="1" id="td-id-4" class="data-cell numeric-cell">04</td>
+                <td abbr="MB" colspan="1" id="td-type-4" class="data-cell">Материнська плата</td>
+                <td abbr="MSI" colspan="1" id="td-brand-4" class="data-cell">MSI PRO Z790-A MAX</td>
+                <td abbr="ATX" colspan="1" id="td-form-4" class="data-cell">ATX / Wi-Fi 7</td>
+                <td abbr="PCIe5" colspan="1" id="td-pcie-4" class="data-cell">PCIe 5.0 x16</td>
+                <td abbr="LGA1700" colspan="1" id="td-sock-4" class="data-cell">LGA1700</td>
+                <td abbr="80W" colspan="1" id="td-tdp-4" class="data-cell">VRM 16+1+1</td>
+                <td abbr="4xDDR5" colspan="1" id="td-mem-4" class="data-cell">4x DDR5-7200</td>
+                <td abbr="10800" colspan="1" id="td-pr-4" class="data-cell numeric-cell">10 800</td>
+                <td abbr="Очік" colspan="1" id="td-st-4" class="data-cell">Очікується</td>
+            </tr>
+            <tr id="row-item-5" align="left" valign="middle" charoff="0">
+                <td abbr="05" colspan="1" id="td-id-5" class="data-cell numeric-cell">05</td>
+                <td abbr="RAM" colspan="1" id="td-type-5" class="data-cell">Оперативна пам'ять</td>
+                <td abbr="Kingston" colspan="1" id="td-brand-5" class="data-cell">Fury Renegade 32GB</td>
+                <td abbr="2x16" colspan="1" id="td-kit-5" class="data-cell">2x16GB Kit</td>
+                <td abbr="6000M" colspan="1" id="td-speed-5" class="data-cell">CL32-38-38</td>
+                <td abbr="DIMM" colspan="1" id="td-sock-5" class="data-cell">288-pin DIMM</td>
+                <td abbr="1.35V" colspan="1" id="td-tdp-5" class="data-cell">1.35 V</td>
+                <td abbr="DDR5" colspan="1" id="td-mem-5" class="data-cell">XMP / EXPO</td>
+                <td abbr="5400" colspan="1" id="td-pr-5" class="data-cell numeric-cell">5 400</td>
+                <td abbr="Є" colspan="1" id="td-st-5" class="data-cell">В наявності</td>
+            </tr>
+        </tbody>
+
+        <tbody id="tbody-gpu-storage" valign="middle" style="background-color: #fafbfc;" title="Відеокарти, накопичувачі та БЖ">
+            <tr id="row-item-6" align="left" valign="middle" charoff="0">
+                <td abbr="06" colspan="1" id="td-id-6" class="data-cell numeric-cell">06</td>
+                <td abbr="GPU" colspan="1" id="td-type-6" class="data-cell">Відеокарта</td>
+                <td abbr="Gigabyte" colspan="1" id="td-brand-6" class="data-cell">RTX 4070 SUPER Gaming</td>
+                <td abbr="12GB" colspan="1" id="td-vram-6" class="data-cell">12 GB GDDR6X</td>
+                <td abbr="192b" colspan="1" id="td-bus-6" class="data-cell">192-bit / DLSS 3</td>
+                <td abbr="PCIe4" colspan="1" id="td-sock-6" class="data-cell">PCIe 4.0 x16</td>
+                <td abbr="220W" colspan="1" id="td-tdp-6" class="data-cell">220 W (16-pin)</td>
+                <td abbr="700W" colspan="1" id="td-psu-6" class="data-cell">БЖ від 650W</td>
+                <td abbr="28900" colspan="1" id="td-pr-6" class="data-cell numeric-cell">28 900</td>
+                <td abbr="Є" colspan="1" id="td-st-6" class="data-cell">В наявності</td>
+            </tr>
+            <tr id="row-item-7" align="left" valign="middle" charoff="0">
+                <td abbr="07" colspan="1" id="td-id-7" class="data-cell numeric-cell">07</td>
+                <td abbr="GPU" colspan="1" id="td-type-7" class="data-cell">Відеокарта</td>
+                <td abbr="Sapphire" colspan="1" id="td-brand-7" class="data-cell">RX 7800 XT Pulse</td>
+                <td abbr="16GB" colspan="1" id="td-vram-7" class="data-cell">16 GB GDDR6</td>
+                <td abbr="256b" colspan="1" id="td-bus-7" class="data-cell">256-bit / FSR 3</td>
+                <td abbr="PCIe4" colspan="1" id="td-sock-7" class="data-cell">PCIe 4.0 x16</td>
+                <td abbr="263W" colspan="1" id="td-tdp-7" class="data-cell">263 W (2x8-pin)</td>
+                <td abbr="750W" colspan="1" id="td-psu-7" class="data-cell">БЖ від 700W</td>
+                <td abbr="24500" colspan="1" id="td-pr-7" class="data-cell numeric-cell">24 500</td>
+                <td abbr="Є" colspan="1" id="td-st-7" class="data-cell">В наявності</td>
+            </tr>
+            <tr id="row-item-8" align="left" valign="middle" charoff="0">
+                <td abbr="08" colspan="1" id="td-id-8" class="data-cell numeric-cell">08</td>
+                <td abbr="SSD" colspan="1" id="td-type-8" class="data-cell">NVMe Накопичувач</td>
+                <td abbr="Samsung" colspan="1" id="td-brand-8" class="data-cell">Samsung 990 PRO 2TB</td>
+                <td abbr="2TB" colspan="1" id="td-cap-8" class="data-cell">M.2 2280 NVMe</td>
+                <td abbr="7450" colspan="1" id="td-io-8" class="data-cell">7450 / 6900 MB/s</td>
+                <td abbr="M.2" colspan="1" id="td-sock-8" class="data-cell">PCIe 4.0 x4</td>
+                <td abbr="8W" colspan="1" id="td-tdp-8" class="data-cell">8.5 W Max</td>
+                <td abbr="Heatsink" colspan="1" id="td-hs-8" class="data-cell">З радіатором</td>
+                <td abbr="7800" colspan="1" id="td-pr-8" class="data-cell numeric-cell">7 800</td>
+                <td abbr="Є" colspan="1" id="td-st-8" class="data-cell">В наявності</td>
+            </tr>
+            <tr id="row-item-9" align="left" valign="middle" charoff="0">
+                <td abbr="09" colspan="1" id="td-id-9" class="data-cell numeric-cell">09</td>
+                <td abbr="PSU" colspan="1" id="td-type-9" class="data-cell">Блок живлення</td>
+                <td abbr="Seasonic" colspan="1" id="td-brand-9" class="data-cell">Focus GX-850 ATX 3.0</td>
+                <td abbr="850W" colspan="1" id="td-w-9" class="data-cell">850 Вт Gold</td>
+                <td abbr="Mod" colspan="1" id="td-mod-9" class="data-cell">Повністю модульний</td>
+                <td abbr="ATX" colspan="1" id="td-form-9" class="data-cell">ATX12V v3.0</td>
+                <td abbr="12VHPWR" colspan="1" id="td-con-9" class="data-cell">PCIe 5.0 12V-2x6</td>
+                <td abbr="135mm" colspan="1" id="td-fan-9" class="data-cell">FDB вентилятор</td>
+                <td abbr="6100" colspan="1" id="td-pr-9" class="data-cell numeric-cell">6 100</td>
+                <td abbr="Є" colspan="1" id="td-st-9" class="data-cell">В наявності</td>
+            </tr>
+            <tr id="row-item-10" align="left" valign="middle" charoff="0">
+                <td abbr="10" colspan="1" id="td-id-10" class="data-cell numeric-cell">10</td>
+                <td abbr="Cooler" colspan="1" id="td-type-10" class="data-cell">Кулер для CPU</td>
+                <td abbr="Thermalright" colspan="1" id="td-brand-10" class="data-cell">Peerless Assassin 120</td>
+                <td abbr="Twin" colspan="1" id="td-rad-10" class="data-cell">Двосекційна вежа</td>
+                <td abbr="6pipes" colspan="1" id="td-pipe-10" class="data-cell">6х 6мм теплотрубок</td>
+                <td abbr="Multi" colspan="1" id="td-sock-10" class="data-cell">AM4/AM5/LGA1700</td>
+                <td abbr="245W" colspan="1" id="td-tdp-10" class="data-cell">До 245 W TDP</td>
+                <td abbr="2x120" colspan="1" id="td-fan-10" class="data-cell">2x 120mm PWM</td>
+                <td abbr="1850" colspan="1" id="td-pr-10" class="data-cell numeric-cell">1 850</td>
+                <td abbr="Є" colspan="1" id="td-st-10" class="data-cell">В наявності</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
