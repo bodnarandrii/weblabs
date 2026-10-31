@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" lang="uk" content="Боднар Андрій Олександрович">
+    <meta name="Description" content="Лабораторна робота №6. SVG графіка. Варіант 1">
+    <title>Лабораторна робота №6 — Варіант 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            margin-top: 50px;
+        }
+        .svg-container {
+            background-color: white;
+            border: 2px solid #ccc;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="svg-container">
+        <svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            
+            <defs>
+                <path id="textCurve" d="M 150 80 Q 400 30 650 80" fill="transparent" />
+            </defs>
+            <text font-size="20" fill="black" font-weight="bold">
+                <textPath xlink:href="#textCurve" startOffset="50%" text-anchor="middle">
+                    SVG Графіка — Варіант 1 (Лабораторна робота №6)
+                </textPath>
+            </text>
+
+            <!-- ================= ЛІВИЙ БЛОК ФІГУР ================= -->
+            
+            <!-- 3.1. Зміна кольору: Верхній лівий квадрат -->
+            <rect x="300" y="200" width="50" height="50" fill="blue" stroke="black" stroke-width="2">
+                <animate attributeName="fill" values="blue; magenta; blue" dur="4s" repeatCount="indefinite" />
+            </rect>
+            
+            <!-- Коло (Центр X:-2, Y:1) -->
+            <circle cx="300" cy="250" r="50" fill="blue" stroke="black" stroke-width="2"/>
+            
+            <!-- 3.3. Обертання: Середній лівий квадрат (Виправлено: подвійний <g>) -->
+            <g transform="translate(325, 325)">
+                <g>
+                    <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="5s" repeatCount="indefinite" />
+                    <rect x="-25" y="-25" width="50" height="50" fill="blue" stroke="black" stroke-width="2"/>
+                </g>
+            </g>
+            
+            <!-- 3.2. Переміщення: Нижній лівий квадрат -->
+            <rect x="250" y="350" width="50" height="50" fill="blue" stroke="black" stroke-width="2">
+                <animate attributeName="y" values="350; 370; 350" dur="2s" repeatCount="indefinite" />
+            </rect>
+            
+            <!-- 3.4. Зміна розміру: Еліпс -->
+            <ellipse cx="350" cy="375" rx="50" ry="25" fill="blue" stroke="black" stroke-width="2">
+                <animate attributeName="rx" values="50; 60; 40; 50" dur="3s" repeatCount="indefinite" />
+            </ellipse>
+
+            <!-- ================= ПРАВИЙ БЛОК ФІГУР ================= -->
+            
+            <!-- Верхній лівий прямокутник -->
+            <rect x="400" y="200" width="100" height="50" fill="blue" stroke="black" stroke-width="2"/>
+            
+            <!-- Верхній правий квадрат -->
+            <rect x="600" y="200" width="50" height="50" fill="blue" stroke="black" stroke-width="2"/>
+            
+            <!-- Нижній лівий квадрат -->
+            <rect x="450" y="350" width="50" height="50" fill="blue" stroke="black" stroke-width="2"/>
+            
+            <!-- 3.5. Перекручування: Нижній правий квадрат (Виправлено: подвійний <g>) -->
+            <g transform="translate(625, 375)">
+                <g>
+                    <animateTransform attributeName="transform" type="skewX" values="0; 25; -25; 0" dur="3s" repeatCount="indefinite" />
+                    <rect x="-25" y="-25" width="50" height="50" fill="blue" stroke="black" stroke-width="2"/>
+                </g>
+            </g>
+
+            <!-- Велике коло (Центр X:3, Y:0) -->
+            <circle cx="550" cy="300" r="100" fill="blue" stroke="black" stroke-width="2"/>
+
+            <!-- ================= ВІСІ КООРДИНАТ ================= -->
+            <line x1="200" y1="300" x2="700" y2="300" stroke="black" stroke-width="2" />
+            <polygon points="700,300 690,295 690,305" fill="black" />
+            <text x="710" y="305" font-size="18" fill="black">X</text>
+
+            <line x1="400" y1="450" x2="400" y2="150" stroke="black" stroke-width="2" />
+            <polygon points="400,150 395,160 405,160" fill="black" />
+            <text x="415" y="165" font-size="18" fill="black">Y</text>
+
+            <!-- Засічки X -->
+            <line x1="250" y1="295" x2="250" y2="305" stroke="black" stroke-width="1"/><text x="240" y="325" font-size="16">-3</text>
+            <line x1="300" y1="295" x2="300" y2="305" stroke="black" stroke-width="1"/><text x="290" y="325" font-size="16">-2</text>
+            <line x1="350" y1="295" x2="350" y2="305" stroke="black" stroke-width="1"/><text x="340" y="325" font-size="16">-1</text>
+            <text x="385" y="320" font-size="16">0</text>
+            <line x1="450" y1="295" x2="450" y2="305" stroke="black" stroke-width="1"/><text x="445" y="325" font-size="16">1</text>
+            <line x1="650" y1="295" x2="650" y2="305" stroke="black" stroke-width="1"/><text x="645" y="325" font-size="16">5</text>
+
+            <!-- Засічки Y -->
+            <line x1="395" y1="400" x2="405" y2="400" stroke="black" stroke-width="1"/><text x="375" y="405" font-size="16">-2</text>
+            <line x1="395" y1="350" x2="405" y2="350" stroke="black" stroke-width="1"/><text x="375" y="355" font-size="16">-1</text>
+            <line x1="395" y1="250" x2="405" y2="250" stroke="black" stroke-width="1"/><text x="385" y="255" font-size="16">1</text>
+            <line x1="395" y1="200" x2="405" y2="200" stroke="black" stroke-width="1"/><text x="385" y="205" font-size="16">2</text>
+        </svg>
+    </div>
+</body>
+</html>
